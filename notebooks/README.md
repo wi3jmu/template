@@ -1,6 +1,11 @@
 # Jupyter notebook template
 
 ## tl;dr
+0. Install requirements
+```
+conda install -c anaconda jupyter
+conda install -c conda-forge jupyter_contrib_nbextensions rise
+```
 1. Clone directory
 `git clone https://github.com/matjesg/WI3JMU.git`
 2. Start the jupyter-notebook server
