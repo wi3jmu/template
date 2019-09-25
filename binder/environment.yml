@@ -1,0 +1,20 @@
+channels:
+  - conda-forge
+  - r
+  - genepattern
+dependencies:
+  - matplotlib
+  - seaborn
+  - numpy
+  - pandas
+  - rpy2
+  - rise
+  - jupyter_contrib_nbextensions
+  - jupyter-wysiwyg
+  - r-irkernel
+  - r-tidyverse
+  - pip
+  - pip:
+      - julia
+      
+  
