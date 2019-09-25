@@ -15,7 +15,7 @@ Installation via NPM (see https://docs.npmjs.com/downloading-and-installing-node
 
 Adapted from the [RISE documentation](https://rise.readthedocs.io/en/stable/index.html).
 
-You can define overlay to build a constant background. It is wrapped in a<div>, so it can be text or html. In this case, the user is entirely responsible for styling.
+You can define *overlay* to build a constant background. It is wrapped in a `<div>` so it can be text or html. In this case, the user is entirely responsible for styling.
 
 RISE looks for two css files to apply CSS changes on top of the slideshow view:
 
@@ -24,13 +24,15 @@ RISE looks for two css files to apply CSS changes on top of the slideshow view:
 
 Both files need to be placed alongside with the notebook of interest, i.e. in the same directory. 
 
-### Globally using RISE in [jupyter-contrib-nbextensions](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html)
+__a. Globally using RISE in [jupyter-contrib-nbextensions](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html)__
 1. Open jupyter-contrib-nbextensions, e.g.:
-```conda install -c conda-forge jupyter_contrib_nbextensions``` 
-2. Select the *RISE* plugin and add **div** to *overlay*
+```http://localhost:8888/nbextensions/``` 
+2. Select the *RISE* plugin and add `<div>` container to *overlay*
 ```<div class='background'><div class='logo'><img src='images/uniwue4c.png'></div><div class='bar'></div><div class='header'>Veranstaltung</br>Semester</br>Lehrstuhl für Wirtschaftsinformatik und Informationsmanagement<br>Prof. Christoph M. Flath</div>```
 
-### Per notebook using the notebook metadata
+The CSS file defines the style of the different classes.
+
+__b. In each notebook using the notebook metadata__
 Edit notebook meta data
 ```
 {
