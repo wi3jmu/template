@@ -7,11 +7,15 @@ conda install -c anaconda jupyter
 conda install -c conda-forge jupyter_contrib_nbextensions rise
 ```
 1. Clone directory
-`git clone https://github.com/matjesg/WI3JMU.git`
+```
+git clone https://github.com/matjesg/WI3JMU.git
+```
 2. Start the jupyter-notebook server
-```jupyter notebook```
+```
+jupyter notebook
+```
 3. Open `Template.ipynb`/`Vorlage.ipynb`
-4. Edit *overlay* in notebook meta data
+4. Open notebook meta data and edit placeholders in *overlay*: `<div class='header'> ...</div>` 
 ```
 {
  ...
@@ -24,13 +28,24 @@ conda install -c conda-forge jupyter_contrib_nbextensions rise
 ## Requirements
 
 Installation instructions using conda (see https://docs.anaconda.com/anaconda/install/)
-- Jupyter Notebook ```conda install -c anaconda jupyter```
+- Jupyter Notebook 
+```
+conda install -c anaconda jupyter
+```
 - [jupyter-contrib-nbextensions](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html)
-```conda install -c conda-forge jupyter_contrib_nbextensions``` 
-- [RISE](https://github.com/damianavila/RISE/) plugin ```conda install -c conda-forge rise ```
+```
+conda install -c conda-forge jupyter_contrib_nbextensions
+``` 
+- [RISE](https://github.com/damianavila/RISE/) plugin 
+```
+conda install -c conda-forge rise
+```
 
 For pdf export: 
-- Decktape  ```npm install -g decktape```
+- Decktape  
+```
+npm install -g decktape
+```
 Installation via NPM (see https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 ## Customization
@@ -48,8 +63,11 @@ Both files need to be placed alongside with the notebook of interest, i.e. in th
 
 __a. In each notebook using the notebook metadata__
 1. Start the jupyter-notebook server
-```jupyter notebook```
-2. Edit notebook meta data
+```
+jupyter notebook
+```
+2. Open `Template.ipynb`/`Vorlage.ipynb`
+3. Open notebook meta data and edit placeholders in *overlay*: `<div class='header'> ...</div>` 
 ```
 {
  ...
@@ -62,9 +80,13 @@ The CSS file defines the style of the different classes.
 
 __b. Globally using RISE in [jupyter-contrib-nbextensions](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html)__
 1. Start the jupyter-notebook server
-```jupyter notebook```
+```
+jupyter notebook
+```
 2. Open jupyter-contrib-nbextensions, e.g.:
-```http://localhost:8888/nbextensions/``` 
+```
+http://localhost:8888/nbextensions/
+``` 
 3. Select the *RISE* plugin and add `<div>` container to *overlay*
 ```
 <div class='background'><div class='logo'><img src='images/uniwue4c.png'></div><div class='bar'></div><div class='header'>Veranstaltung</br>Semester</br>Lehrstuhl für XYZ<br>Prof. Dr. XX</div>"
@@ -74,10 +96,14 @@ The CSS file defines the style of the different classes.
 ## Export as pdf
 
 1. Start the jupyter-notebook server (you don’t have to start the RISE presentation, you don’t even have to open any notebook at all):
-```jupyter notebook```
+```
+jupyter notebook
+```
 
 2. Run decktape with:
-```decktape rise <Jupyter-Notebook-URL><?token=xxx><Output-File>```
+```
+decktape rise <Jupyter-Notebook-URL><?token=xxx><Output-File>
+```
 
 More concretely, it looks something like the following:
 ```
