@@ -1,5 +1,21 @@
 # Jupyter notebook template
 
+## tl;dr
+1. Clone directory
+`git clone https://github.com/matjesg/WI3JMU.git`
+2. Start the jupyter-notebook server
+```jupyter notebook```
+3. Open `Template.ipynb`/`Vorlage.ipynb`
+4. Edit *overlay* in notebook meta data
+```
+{
+ ...
+ "rise": {
+     "overlay": "<div class='background'><div class='logo'><img src='images/uniwue4c.png'></div><div class='bar'></div><div class='header'>Veranstaltung</br>Semester</br>Lehrstuhl für XYZ<br>Prof. Dr. XX</div>"
+ }
+}
+```
+
 ## Requirements
 
 Installation instructions using conda (see https://docs.anaconda.com/anaconda/install/)
@@ -8,8 +24,9 @@ Installation instructions using conda (see https://docs.anaconda.com/anaconda/in
 ```conda install -c conda-forge jupyter_contrib_nbextensions``` 
 - [RISE](https://github.com/damianavila/RISE/) plugin ```conda install -c conda-forge rise ```
 
+For pdf export: 
+- Decktape  ```npm install -g decktape```
 Installation via NPM (see https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-- Decktape (for pdf export) ```npm install -g decktape```
 
 ## Customization
 
@@ -24,19 +41,7 @@ RISE looks for two css files to apply CSS changes on top of the slideshow view:
 
 Both files need to be placed alongside with the notebook of interest, i.e. in the same directory. 
 
-__a. Globally using RISE in [jupyter-contrib-nbextensions](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html)__
-1. Start the jupyter-notebook server
-```jupyter notebook```
-2. Open jupyter-contrib-nbextensions, e.g.:
-```http://localhost:8888/nbextensions/``` 
-3. Select the *RISE* plugin and add `<div>` container to *overlay*
-```
-<div class='background'><div class='logo'><img src='images/uniwue4c.png'></div><div class='bar'></div><div class='header'>Veranstaltung</br>Semester</br>Lehrstuhl für XYZ<br>Prof. Dr. XX</div>"
-```
-
-The CSS file defines the style of the different classes.
-
-__b. In each notebook using the notebook metadata__
+__a. In each notebook using the notebook metadata__
 1. Start the jupyter-notebook server
 ```jupyter notebook```
 2. Edit notebook meta data
@@ -48,6 +53,18 @@ __b. In each notebook using the notebook metadata__
  }
 }
 ```
+The CSS file defines the style of the different classes.
+
+__b. Globally using RISE in [jupyter-contrib-nbextensions](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html)__
+1. Start the jupyter-notebook server
+```jupyter notebook```
+2. Open jupyter-contrib-nbextensions, e.g.:
+```http://localhost:8888/nbextensions/``` 
+3. Select the *RISE* plugin and add `<div>` container to *overlay*
+```
+<div class='background'><div class='logo'><img src='images/uniwue4c.png'></div><div class='bar'></div><div class='header'>Veranstaltung</br>Semester</br>Lehrstuhl für XYZ<br>Prof. Dr. XX</div>"
+```
+The CSS file defines the style of the different classes.
 
 ## Export as pdf
 
