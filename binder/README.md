@@ -1,4 +1,4 @@
-# How to setup *binder* for a classroom
+# How to set up *binder*
 
 - Choose a language for your environment
 - Add the required packages
