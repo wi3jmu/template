@@ -1,4 +1,4 @@
-# wi3jmu Jupyter notebook template
+# Jupyter notebook template
 
 ## Requirements
 
@@ -7,6 +7,8 @@ Installation instructions using conda (see https://docs.anaconda.com/anaconda/in
 - [jupyter-contrib-nbextensions](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html)
 ```conda install -c conda-forge jupyter_contrib_nbextensions``` 
 - [RISE](https://github.com/damianavila/RISE/) plugin ```conda install -c conda-forge rise ```
+
+Installation via NPM (see https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 - Decktape (for pdf export) ```npm install -g decktape```
 
 ## Customization
