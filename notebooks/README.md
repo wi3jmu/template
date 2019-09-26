@@ -78,7 +78,7 @@ Both files need to be placed alongside with the notebook of interest, i.e. in th
 
 __a. Customize each notebook using the notebook metadata__
 
-![](images/README/images/metadata.png)
+![](images/README/metadata.png)
 
 1. Start the jupyter-notebook server
 ```
@@ -117,7 +117,7 @@ jupyter notebook
 http://localhost:8888/nbextensions/
 ``` 
 
-![](images/README/configurator.png')
+![](images/README/configurator.png)
 
 
 ## Export as pdf
