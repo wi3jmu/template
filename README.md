@@ -6,4 +6,5 @@ Internal instructions and course materials - Chair of Information Systems and Ma
 
 
 ### Known issues
-- Presentation in Binder does not reconize custom rise.css
+[ ] Presentation in Binder does not recognize custom rise.css
+[ ] Julia packages not preinstalled on Binder
