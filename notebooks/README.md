@@ -1,4 +1,4 @@
-# Jupyter notebook template
+# Jupyter notebook presentation
 
 ## tl;dr
 0. Install requirements
