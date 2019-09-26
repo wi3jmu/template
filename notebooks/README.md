@@ -27,7 +27,7 @@ jupyter notebook
 
 ## How to create slideshows
 ### Step 1: enable slideshow cell toolbar
-![](images/README/slide-toolbar.png')
+![](images/README/slide-toolbar.png)
 
 ### Step 2:  add appropriate tag to each cell
 From the cell toolbar...
@@ -78,7 +78,7 @@ Both files need to be placed alongside with the notebook of interest, i.e. in th
 
 __a. Customize each notebook using the notebook metadata__
 
-![](images/README/images/metadata.png')
+![](images/README/images/metadata.png)
 
 1. Start the jupyter-notebook server
 ```
