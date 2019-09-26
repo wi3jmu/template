@@ -2,7 +2,7 @@
 
 - Choose a language for your environment
 - Add the required packages
-- Delete unnecessary files config files
+- Delete unnecessary config files
 
 ## Python and R
 __environment.yml__ - Install a Python environment. It also allows to install R packages or include *pip* instructions
