@@ -14,7 +14,7 @@ git clone https://github.com/matjesg/WI3JMU.git
 ```
 jupyter notebook
 ```
-3. Open `Template.ipynb`/`Vorlage.ipynb`
+3. Open `template_presentation.ipynb`
 4. Open notebook meta data and edit placeholders in *overlay*: `<div class='header'> ...</div>` 
 ```
 {
@@ -24,6 +24,21 @@ jupyter notebook
  }
 }
 ```
+
+## How to create slideshows
+### Step 1: enable slideshow cell toolbar
+![](images/README/slide-toolbar.png')
+
+### Step 2:  add appropriate tag to each cell
+From the cell toolbar...
+
+![](images/README/toolbar-options.png)
+
+or, in command mode, use keyboard shortcuts
+
+* `shift-i` : toggle slide
+* `shift-b` : toggle subslide
+* `shift-g` : toggle fragment
 
 ## Requirements
 
@@ -61,24 +76,38 @@ RISE looks for two css files to apply CSS changes on top of the slideshow view:
 
 Both files need to be placed alongside with the notebook of interest, i.e. in the same directory. 
 
-__a. In each notebook using the notebook metadata__
+__a. Customize each notebook using the notebook metadata__
+
+![](images/README/images/metadata.png')
+
 1. Start the jupyter-notebook server
 ```
 jupyter notebook
 ```
-2. Open `Template.ipynb`/`Vorlage.ipynb`
+2. Open `template_presentation.ipynb`
 3. Open notebook meta data and edit placeholders in *overlay*: `<div class='header'> ...</div>` 
 ```
 {
  ...
  "rise": {
-     "overlay": "<div class='background'><div class='logo'><img src='images/uniwue4c.png'></div><div class='bar'></div><div class='header'>Veranstaltung</br>Semester</br>Lehrstuhl für XYZ<br>Prof. Dr. XX</div>"
+     "overlay": "<div class='header'>Veranstaltung</br>Semester</br>Lehrstuhl für XYZ<br>Prof. Dr. XX</div>..."
  }
 }
 ```
-The CSS file defines the style of the different classes.
 
-__b. Globally using RISE in [jupyter-contrib-nbextensions](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html)__
+You can also configure 
+- presentation theme
+- transiton between slides
+- auto-launch presentation mode
+- vertical scrollbar
+- chalkboard capabilities
+- keyboard shortcuts
+
+For more information, read the [RISE docs](https://rise.readthedocs.io/en/maint-5.5/customize.html#what-to-configure)
+
+__b. Customize RISE globally__
+
+
 1. Start the jupyter-notebook server
 ```
 jupyter notebook
@@ -87,11 +116,9 @@ jupyter notebook
 ```
 http://localhost:8888/nbextensions/
 ``` 
-3. Select the *RISE* plugin and add `<div>` container to *overlay*
-```
-<div class='background'><div class='logo'><img src='images/uniwue4c.png'></div><div class='bar'></div><div class='header'>Veranstaltung</br>Semester</br>Lehrstuhl für XYZ<br>Prof. Dr. XX</div>"
-```
-The CSS file defines the style of the different classes.
+
+![](images/README/configurator.png')
+
 
 ## Export as pdf
 
@@ -107,7 +134,7 @@ decktape rise <Jupyter-Notebook-URL><?token=xxx><Output-File>
 
 More concretely, it looks something like the following:
 ```
-decktape rise -s 2000x1200 http://localhost:8888/notebooks/Vorlage.ipynb?token=1cb4ccc638b75a62a81821a919da954c06f9623797e9e292 Vorlage.pdf
+decktape rise -s 2000x1200 http://localhost:8888/notebooks/template_presentation.ipynb?token=1cb4ccc638b75a62a81821a919da954c06f9623797e9e292 template_presentation.pdf
 ```
 Here, s defines the size of the slides deck viewport: <width>x<height> (e.g. '1280x720'). See the [decktape docs](https://github.com/astefanutti/decktape#90).
 
